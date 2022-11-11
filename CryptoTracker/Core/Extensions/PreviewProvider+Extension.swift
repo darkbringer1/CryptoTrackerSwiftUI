@@ -16,7 +16,9 @@ extension PreviewProvider {
 class DeveloperPreview {
     static let instance = DeveloperPreview()
     private init() {}
-    
+
+    var vm = HomeViewModel()
+
     let coin = CoinModel(
         id: "bitcoin",
         symbol: "btc",
@@ -215,5 +217,5 @@ class DeveloperPreview {
             
         ]),
         priceChangePercentage24HInCurrency: 3952.64,
-        currentHoldings: 1.5) 
+        currentHoldings: 1.5)
 }

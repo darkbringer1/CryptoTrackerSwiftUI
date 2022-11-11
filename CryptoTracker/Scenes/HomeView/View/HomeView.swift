@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var showPortfolio: Bool = false
+    @State private var showPortfolio: Bool = true
+    @StateObject var vm = HomeViewModel()
     
     var body: some View {
         ZStack {
@@ -17,7 +18,19 @@ struct HomeView: View {
             
             VStack {
                 homeHeader
-                Spacer(minLength: 0)
+                
+                columnTitles
+                
+                if !showPortfolio {
+                    
+                    allCoinsList
+                    .transition(.move(edge: .leading))
+                }
+                if showPortfolio {
+                    portfolioCoinsList
+                        .transition(.move(edge: .trailing))
+                }
+                Spacer()
             }
         }
     }
@@ -57,5 +70,39 @@ extension HomeView {
                 }
         }
         .padding(.horizontal)
+    }
+    private var allCoinsList: some View {
+        List {
+            ForEach(vm.allCoins) { coin in
+                CoinRowView(coin: coin, showHoldingsColumn: showPortfolio)
+            }
+            .listRowInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+        }
+        .listStyle(PlainListStyle())
+    }
+    
+    private var portfolioCoinsList: some View {
+        List {
+            ForEach(vm.portfolioCoins) { coin in
+                CoinRowView(coin: coin, showHoldingsColumn: showPortfolio)
+            }
+            .listRowInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+        }
+        .listStyle(PlainListStyle())
+    }
+    
+    private var columnTitles: some View {
+        HStack {
+            Text("Coin")
+            Spacer()
+            if showPortfolio {
+                Text("Holdings")
+            }
+            Text("Price")
+                .frame(width: UIScreen.main.bounds.width / 3, alignment: .trailing)
+        }
+        .font(.subheadline)
+        .padding(.horizontal)
+        .foregroundColor(Color(.pencilLead))
     }
 }

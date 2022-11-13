@@ -7,10 +7,11 @@
 
 import Foundation
 import Combine
+import CombineNetworkOperationPackage
 
 class HomeViewModel: ObservableObject {
-    @Published var allCoins: [CoinModel] = []
-    @Published var portfolioCoins: [CoinModel] = []
+    @Published var allCoins: [CoinResponseModel] = []
+    @Published var portfolioCoins: [CoinResponseModel] = []
     
     private let dataService = CoinDataService()
     
@@ -25,5 +26,9 @@ class HomeViewModel: ObservableObject {
             self?.allCoins = returnedCoins
         }
         .store(in: &cancellables)
+    }
+    
+    func getCoins() {
+        dataService.getCoins()
     }
 }

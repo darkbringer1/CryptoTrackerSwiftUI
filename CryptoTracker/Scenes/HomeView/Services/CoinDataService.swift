@@ -10,21 +10,19 @@ import Combine
 import CombineNetworkOperationPackage
 
 class CoinDataService {
-    @Published var allCoins: [CoinModel] = []
+    @Published var allCoins: [CoinResponseModel] = []
     var coinSubscription: AnyCancellable?
     
-    init() {
-        getCoins()
-    }
+    init() {}
     
-    private func getCoins() {
+    func getCoins() {
         do {
             guard let request = try? CoinMarketServiceProvider(request: CoinMarketRequestModel(currency: "usd")).returnURLRequest() else { return }
             coinSubscription = APIManager.shared.dispatch(request: request)
-                .sink { _ in }
-        receiveValue: { coins in
-            self.allCoins = coins
-        }
+                .sink(receiveCompletion: { _ in },
+                      receiveValue: { [weak self] result in
+                    self?.allCoins = result
+                })
         }
         coinSubscription?.cancel()
     }

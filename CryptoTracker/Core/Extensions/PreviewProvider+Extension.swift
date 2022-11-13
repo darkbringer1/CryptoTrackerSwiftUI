@@ -19,7 +19,7 @@ class DeveloperPreview {
 
     var vm = HomeViewModel()
 
-    let coin = CoinModel(
+    let coin = CoinResponseModel(
         id: "bitcoin",
         symbol: "btc",
         name: "Bitcoin",

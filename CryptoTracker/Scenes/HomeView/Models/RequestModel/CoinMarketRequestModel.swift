@@ -1,5 +1,5 @@
 //
-//  RequestModel.swift
+//  CoinMarketRequestModel.swift
 //  CryptoTracker
 //
 //  Created by Doğukaan Kılıçarslan on 13.11.2022.

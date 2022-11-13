@@ -18,11 +18,8 @@ struct HomeView: View {
             
             VStack {
                 homeHeader
-                
                 columnTitles
-                
                 if !showPortfolio {
-                    
                     allCoinsList
                     .transition(.move(edge: .leading))
                 }
@@ -34,6 +31,9 @@ struct HomeView: View {
             }
         }
         .ignoresSafeArea(edges: .bottom)
+        .onAppear {
+            vm.getCoins()
+        }
     }
 }
 
@@ -68,6 +68,7 @@ extension HomeView {
                     withAnimation(.spring()) {
                         showPortfolio.toggle()
                     }
+                    vm.getCoins()
                 }
         }
         .padding(.horizontal)
@@ -80,6 +81,7 @@ extension HomeView {
             .listRowInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
         }
         .listStyle(PlainListStyle())
+        .scrollIndicators(.hidden)
     }
     
     private var portfolioCoinsList: some View {
@@ -90,6 +92,7 @@ extension HomeView {
             .listRowInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
         }
         .listStyle(PlainListStyle())
+        .scrollIndicators(.hidden)
     }
     
     private var columnTitles: some View {

@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "combinenetworkoperationpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/darkbringer1/CombineNetworkOperationPackage.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "3e41e742abfb3e8a78809c77c7498e939c04c4f0"
+      }
+    }
+  ],
+  "version" : 2
+}

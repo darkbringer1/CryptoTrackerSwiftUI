@@ -18,7 +18,7 @@ import Foundation
 import Foundation
 
 // MARK: - WelcomeElement
-struct CoinModel: Codable, Identifiable {
+struct CoinResponseModel: Codable, Identifiable {
     var id, symbol, name: String?
     var image: String?
     var currentPrice: Double?
@@ -65,9 +65,9 @@ struct CoinModel: Codable, Identifiable {
         case priceChangePercentage24HInCurrency = "price_change_percentage_24h_in_currency"
     }
     
-    func updateHoldings(amount: Double) -> CoinModel {
+    func updateHoldings(amount: Double) -> CoinResponseModel {
         
-        return CoinModel(id: id,
+        return CoinResponseModel(id: id,
                          symbol: symbol,
                          name: name,
                          image: image,

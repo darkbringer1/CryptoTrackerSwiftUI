@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CoinRowView: View {
-    let coin: CoinModel
+    let coin: CoinResponseModel
     let showHoldingsColumn: Bool
     
     var body: some View {

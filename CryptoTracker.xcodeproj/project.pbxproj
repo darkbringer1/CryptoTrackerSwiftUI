@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E7B2F132921641E00224C80 /* EndpointHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B2F122921641E00224C80 /* EndpointHelper.swift */; };
+		1E7B2F192921858B00224C80 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B2F182921858B00224C80 /* CustomImageView.swift */; };
 		1E80AFE0291C2821007F88B4 /* CryptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80AFDF291C2821007F88B4 /* CryptoTrackerApp.swift */; };
 		1E80AFE2291C2821007F88B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80AFE1291C2821007F88B4 /* ContentView.swift */; };
 		1E80AFE4291C2822007F88B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E80AFE3291C2822007F88B4 /* Assets.xcassets */; };
@@ -21,18 +23,20 @@
 		1E80B003291C3B05007F88B4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E80B002291C3B05007F88B4 /* Colors.xcassets */; };
 		1E80B005291C428B007F88B4 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B004291C428B007F88B4 /* ColorView.swift */; };
 		1E80B00A291C46E4007F88B4 /* CircleButtonAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B009291C46E4007F88B4 /* CircleButtonAnimationView.swift */; };
-		1E80B00E291D74D4007F88B4 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B00D291D74D4007F88B4 /* CoinModel.swift */; };
+		1E80B00E291D74D4007F88B4 /* CoinResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B00D291D74D4007F88B4 /* CoinResponseModel.swift */; };
 		1E80B010291D78E2007F88B4 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B00F291D78E2007F88B4 /* CoinRowView.swift */; };
 		1E80B012291D7942007F88B4 /* PreviewProvider+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B011291D7942007F88B4 /* PreviewProvider+Extension.swift */; };
 		1E80B014291D7C8C007F88B4 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B013291D7C8C007F88B4 /* Double+Extension.swift */; };
 		1EF1FE44291FFAB200915855 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1FE43291FFAB200915855 /* CoinDataService.swift */; };
 		1EF1FE47291FFFDF00915855 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1FE46291FFFDF00915855 /* NetworkManager.swift */; };
-		1EF1FE4F2921185400915855 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1FE4E2921185400915855 /* RequestModel.swift */; };
+		1EF1FE4F2921185400915855 /* CoinMarketRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1FE4E2921185400915855 /* CoinMarketRequestModel.swift */; };
 		1EF1FE5229211B1D00915855 /* CoinMarketServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1FE5129211B1D00915855 /* CoinMarketServiceProvider.swift */; };
-		1EF1FE56292120FC00915855 /* CombineNetworkOperationPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF1FE55292120FC00915855 /* CombineNetworkOperationPackage */; };
+		1EFC5CD82921284600AF0884 /* CombineNetworkOperationPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 1EFC5CD72921284600AF0884 /* CombineNetworkOperationPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E7B2F122921641E00224C80 /* EndpointHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointHelper.swift; sourceTree = "<group>"; };
+		1E7B2F182921858B00224C80 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		1E80AFDC291C2821007F88B4 /* CryptoTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E80AFDF291C2821007F88B4 /* CryptoTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackerApp.swift; sourceTree = "<group>"; };
 		1E80AFE1291C2821007F88B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,15 +53,14 @@
 		1E80B002291C3B05007F88B4 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		1E80B004291C428B007F88B4 /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		1E80B009291C46E4007F88B4 /* CircleButtonAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift; sourceTree = "<group>"; };
-		1E80B00D291D74D4007F88B4 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		1E80B00D291D74D4007F88B4 /* CoinResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinResponseModel.swift; sourceTree = "<group>"; };
 		1E80B00F291D78E2007F88B4 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		1E80B011291D7942007F88B4 /* PreviewProvider+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+Extension.swift"; sourceTree = "<group>"; };
 		1E80B013291D7C8C007F88B4 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		1EF1FE43291FFAB200915855 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
 		1EF1FE46291FFFDF00915855 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		1EF1FE4E2921185400915855 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		1EF1FE4E2921185400915855 /* CoinMarketRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketRequestModel.swift; sourceTree = "<group>"; };
 		1EF1FE5129211B1D00915855 /* CoinMarketServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketServiceProvider.swift; sourceTree = "<group>"; };
-		1EF1FE5329211FCC00915855 /* CombineNetworkOperationPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CombineNetworkOperationPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +68,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EF1FE56292120FC00915855 /* CombineNetworkOperationPackage in Frameworks */,
+				1EFC5CD82921284600AF0884 /* CombineNetworkOperationPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E7B2F112921641200224C80 /* EndpointHelper */ = {
+			isa = PBXGroup;
+			children = (
+				1E7B2F122921641E00224C80 /* EndpointHelper.swift */,
+			);
+			path = EndpointHelper;
+			sourceTree = "<group>";
+		};
+		1E7B2F14292165AF00224C80 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1EF1FE43291FFAB200915855 /* CoinDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1E7B2F15292165ED00224C80 /* ResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				1E80B00D291D74D4007F88B4 /* CoinResponseModel.swift */,
+			);
+			path = ResponseModel;
+			sourceTree = "<group>";
+		};
+		1E7B2F162921857900224C80 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1E7B2F172921858000224C80 /* ImageView */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1E7B2F172921858000224C80 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				1E7B2F182921858B00224C80 /* CustomImageView.swift */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
 		1E80AFD3291C2821007F88B4 = {
 			isa = PBXGroup;
 			children = (
-				1EF1FE492921038600915855 /* Packages */,
 				1E80AFDE291C2821007F88B4 /* CryptoTracker */,
 				1E80AFDD291C2821007F88B4 /* Products */,
 				1EF1FE54292120FC00915855 /* Frameworks */,
@@ -93,6 +135,7 @@
 		1E80AFDE291C2821007F88B4 /* CryptoTracker */ = {
 			isa = PBXGroup;
 			children = (
+				1E7B2F162921857900224C80 /* Components */,
 				1E80AFDF291C2821007F88B4 /* CryptoTrackerApp.swift */,
 				1E80B00B291D74C4007F88B4 /* DataOps */,
 				1E80AFE1291C2821007F88B4 /* ContentView.swift */,
@@ -136,6 +179,8 @@
 		1E80AFF0291C2938007F88B4 /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
+				1EF1FE42291FFA9500915855 /* Models */,
+				1E7B2F14292165AF00224C80 /* Services */,
 				1E80AFF6291C2A1E007F88B4 /* View */,
 				1E80AFF7291C2A24007F88B4 /* ViewModel */,
 			);
@@ -201,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				1EF1FE45291FFFD400915855 /* Network */,
-				1EF1FE42291FFA9500915855 /* Models */,
 			);
 			path = DataOps;
 			sourceTree = "<group>";
@@ -209,8 +253,8 @@
 		1E80B00C291D74CA007F88B4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1E7B2F112921641200224C80 /* EndpointHelper */,
 				1EF1FE5029211B0A00915855 /* ServiceProviders */,
-				1EF1FE43291FFAB200915855 /* CoinDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -219,7 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				1EF1FE4D2921184A00915855 /* RequestModel */,
-				1E80B00D291D74D4007F88B4 /* CoinModel.swift */,
+				1E7B2F15292165ED00224C80 /* ResponseModel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,18 +276,10 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		1EF1FE492921038600915855 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				1EF1FE5329211FCC00915855 /* CombineNetworkOperationPackage */,
-			);
-			path = Packages;
-			sourceTree = "<group>";
-		};
 		1EF1FE4D2921184A00915855 /* RequestModel */ = {
 			isa = PBXGroup;
 			children = (
-				1EF1FE4E2921185400915855 /* RequestModel.swift */,
+				1EF1FE4E2921185400915855 /* CoinMarketRequestModel.swift */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
@@ -280,7 +316,7 @@
 			);
 			name = CryptoTracker;
 			packageProductDependencies = (
-				1EF1FE55292120FC00915855 /* CombineNetworkOperationPackage */,
+				1EFC5CD72921284600AF0884 /* CombineNetworkOperationPackage */,
 			);
 			productName = CryptoTracker;
 			productReference = 1E80AFDC291C2821007F88B4 /* CryptoTracker.app */;
@@ -310,6 +346,9 @@
 				Base,
 			);
 			mainGroup = 1E80AFD3291C2821007F88B4;
+			packageReferences = (
+				1EFC5CD62921284600AF0884 /* XCRemoteSwiftPackageReference "CombineNetworkOperationPackage" */,
+			);
 			productRefGroup = 1E80AFDD291C2821007F88B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,13 +380,15 @@
 				1EF1FE5229211B1D00915855 /* CoinMarketServiceProvider.swift in Sources */,
 				1E80B010291D78E2007F88B4 /* CoinRowView.swift in Sources */,
 				1E80B00A291C46E4007F88B4 /* CircleButtonAnimationView.swift in Sources */,
+				1E7B2F132921641E00224C80 /* EndpointHelper.swift in Sources */,
 				1E80B001291C3849007F88B4 /* String+Extension.swift in Sources */,
 				1EF1FE44291FFAB200915855 /* CoinDataService.swift in Sources */,
-				1EF1FE4F2921185400915855 /* RequestModel.swift in Sources */,
+				1EF1FE4F2921185400915855 /* CoinMarketRequestModel.swift in Sources */,
 				1E80AFFB291C314C007F88B4 /* ColorHelper.swift in Sources */,
-				1E80B00E291D74D4007F88B4 /* CoinModel.swift in Sources */,
+				1E80B00E291D74D4007F88B4 /* CoinResponseModel.swift in Sources */,
 				1E80AFE2291C2821007F88B4 /* ContentView.swift in Sources */,
 				1E80B005291C428B007F88B4 /* ColorView.swift in Sources */,
+				1E7B2F192921858B00224C80 /* CustomImageView.swift in Sources */,
 				1E80B014291D7C8C007F88B4 /* Double+Extension.swift in Sources */,
 				1EF1FE47291FFFDF00915855 /* NetworkManager.swift in Sources */,
 				1E80AFE0291C2821007F88B4 /* CryptoTrackerApp.swift in Sources */,
@@ -497,7 +538,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
@@ -536,7 +577,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.6;
@@ -574,9 +615,21 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		1EFC5CD62921284600AF0884 /* XCRemoteSwiftPackageReference "CombineNetworkOperationPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/darkbringer1/CombineNetworkOperationPackage.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		1EF1FE55292120FC00915855 /* CombineNetworkOperationPackage */ = {
+		1EFC5CD72921284600AF0884 /* CombineNetworkOperationPackage */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 1EFC5CD62921284600AF0884 /* XCRemoteSwiftPackageReference "CombineNetworkOperationPackage" */;
 			productName = CombineNetworkOperationPackage;
 		};
 /* End XCSwiftPackageProductDependency section */

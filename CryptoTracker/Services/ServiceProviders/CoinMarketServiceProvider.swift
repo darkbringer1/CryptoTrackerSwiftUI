@@ -11,8 +11,8 @@ import CombineNetworkOperationPackage
 class CoinMarketServiceProvider: APIServiceProvider<CoinMarketRequestModel> {
     init(request: CoinMarketRequestModel) {
         super.init(method: .get,
-                   baseURL: "https://api.coingecko.com/api/v3/",
-                   path: "coins/markets",
+                   baseURL: BaseURL.coingeckoV3.value,
+                   path: Path.coinMarket.value,
                    data: request)
     }
 }

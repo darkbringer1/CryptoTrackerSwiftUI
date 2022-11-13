@@ -33,6 +33,7 @@ struct HomeView: View {
                 Spacer()
             }
         }
+        .ignoresSafeArea(edges: .bottom)
     }
 }
 

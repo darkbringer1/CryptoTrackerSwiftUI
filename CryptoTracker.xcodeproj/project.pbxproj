@@ -25,6 +25,11 @@
 		1E80B010291D78E2007F88B4 /* CoinRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B00F291D78E2007F88B4 /* CoinRowView.swift */; };
 		1E80B012291D7942007F88B4 /* PreviewProvider+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B011291D7942007F88B4 /* PreviewProvider+Extension.swift */; };
 		1E80B014291D7C8C007F88B4 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B013291D7C8C007F88B4 /* Double+Extension.swift */; };
+		1EF1FE44291FFAB200915855 /* CoinDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1FE43291FFAB200915855 /* CoinDataService.swift */; };
+		1EF1FE47291FFFDF00915855 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1FE46291FFFDF00915855 /* NetworkManager.swift */; };
+		1EF1FE4F2921185400915855 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1FE4E2921185400915855 /* RequestModel.swift */; };
+		1EF1FE5229211B1D00915855 /* CoinMarketServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1FE5129211B1D00915855 /* CoinMarketServiceProvider.swift */; };
+		1EF1FE56292120FC00915855 /* CombineNetworkOperationPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 1EF1FE55292120FC00915855 /* CombineNetworkOperationPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,11 @@
 		1E80B00F291D78E2007F88B4 /* CoinRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRowView.swift; sourceTree = "<group>"; };
 		1E80B011291D7942007F88B4 /* PreviewProvider+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+Extension.swift"; sourceTree = "<group>"; };
 		1E80B013291D7C8C007F88B4 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		1EF1FE43291FFAB200915855 /* CoinDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataService.swift; sourceTree = "<group>"; };
+		1EF1FE46291FFFDF00915855 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		1EF1FE4E2921185400915855 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		1EF1FE5129211B1D00915855 /* CoinMarketServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketServiceProvider.swift; sourceTree = "<group>"; };
+		1EF1FE5329211FCC00915855 /* CombineNetworkOperationPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CombineNetworkOperationPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF1FE56292120FC00915855 /* CombineNetworkOperationPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,8 +75,10 @@
 		1E80AFD3291C2821007F88B4 = {
 			isa = PBXGroup;
 			children = (
+				1EF1FE492921038600915855 /* Packages */,
 				1E80AFDE291C2821007F88B4 /* CryptoTracker */,
 				1E80AFDD291C2821007F88B4 /* Products */,
+				1EF1FE54292120FC00915855 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +96,7 @@
 				1E80AFDF291C2821007F88B4 /* CryptoTrackerApp.swift */,
 				1E80B00B291D74C4007F88B4 /* DataOps */,
 				1E80AFE1291C2821007F88B4 /* ContentView.swift */,
+				1E80B00C291D74CA007F88B4 /* Services */,
 				1E80AFEF291C292D007F88B4 /* Core */,
 				1E80AFEE291C291F007F88B4 /* Scenes */,
 				1E80AFE3291C2822007F88B4 /* Assets.xcassets */,
@@ -186,7 +200,8 @@
 		1E80B00B291D74C4007F88B4 /* DataOps */ = {
 			isa = PBXGroup;
 			children = (
-				1E80B00C291D74CA007F88B4 /* Services */,
+				1EF1FE45291FFFD400915855 /* Network */,
+				1EF1FE42291FFA9500915855 /* Models */,
 			);
 			path = DataOps;
 			sourceTree = "<group>";
@@ -194,9 +209,58 @@
 		1E80B00C291D74CA007F88B4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				1E80B00D291D74D4007F88B4 /* CoinModel.swift */,
+				1EF1FE5029211B0A00915855 /* ServiceProviders */,
+				1EF1FE43291FFAB200915855 /* CoinDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1EF1FE42291FFA9500915855 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1EF1FE4D2921184A00915855 /* RequestModel */,
+				1E80B00D291D74D4007F88B4 /* CoinModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1EF1FE45291FFFD400915855 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1EF1FE46291FFFDF00915855 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1EF1FE492921038600915855 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				1EF1FE5329211FCC00915855 /* CombineNetworkOperationPackage */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		1EF1FE4D2921184A00915855 /* RequestModel */ = {
+			isa = PBXGroup;
+			children = (
+				1EF1FE4E2921185400915855 /* RequestModel.swift */,
+			);
+			path = RequestModel;
+			sourceTree = "<group>";
+		};
+		1EF1FE5029211B0A00915855 /* ServiceProviders */ = {
+			isa = PBXGroup;
+			children = (
+				1EF1FE5129211B1D00915855 /* CoinMarketServiceProvider.swift */,
+			);
+			path = ServiceProviders;
+			sourceTree = "<group>";
+		};
+		1EF1FE54292120FC00915855 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +279,9 @@
 			dependencies = (
 			);
 			name = CryptoTracker;
+			packageProductDependencies = (
+				1EF1FE55292120FC00915855 /* CombineNetworkOperationPackage */,
+			);
 			productName = CryptoTracker;
 			productReference = 1E80AFDC291C2821007F88B4 /* CryptoTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -271,14 +338,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E80AFF2291C294C007F88B4 /* HomeView.swift in Sources */,
+				1EF1FE5229211B1D00915855 /* CoinMarketServiceProvider.swift in Sources */,
 				1E80B010291D78E2007F88B4 /* CoinRowView.swift in Sources */,
 				1E80B00A291C46E4007F88B4 /* CircleButtonAnimationView.swift in Sources */,
 				1E80B001291C3849007F88B4 /* String+Extension.swift in Sources */,
+				1EF1FE44291FFAB200915855 /* CoinDataService.swift in Sources */,
+				1EF1FE4F2921185400915855 /* RequestModel.swift in Sources */,
 				1E80AFFB291C314C007F88B4 /* ColorHelper.swift in Sources */,
 				1E80B00E291D74D4007F88B4 /* CoinModel.swift in Sources */,
 				1E80AFE2291C2821007F88B4 /* ContentView.swift in Sources */,
 				1E80B005291C428B007F88B4 /* ColorView.swift in Sources */,
 				1E80B014291D7C8C007F88B4 /* Double+Extension.swift in Sources */,
+				1EF1FE47291FFFDF00915855 /* NetworkManager.swift in Sources */,
 				1E80AFE0291C2821007F88B4 /* CryptoTrackerApp.swift in Sources */,
 				1E80AFF9291C2A39007F88B4 /* CircleButtonView.swift in Sources */,
 				1E80AFFF291C31C4007F88B4 /* GenericDataProtocol.swift in Sources */,
@@ -341,6 +412,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -393,6 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -500,6 +573,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1EF1FE55292120FC00915855 /* CombineNetworkOperationPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CombineNetworkOperationPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E80AFD4291C2821007F88B4 /* Project object */;
 }

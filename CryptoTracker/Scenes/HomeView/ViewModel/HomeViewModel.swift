@@ -12,9 +12,9 @@ import CombineNetworkOperationPackage
 class HomeViewModel: ObservableObject {
     @Published var allCoins: [CoinResponseModel] = []
     @Published var portfolioCoins: [CoinResponseModel] = []
+    @Published var customImageViewModel: CustomImageViewModel = CustomImageViewModel()
     
     private let dataService = CoinDataService()
-    
     private var cancellables = Set<AnyCancellable>()
     
     init() {
@@ -31,4 +31,5 @@ class HomeViewModel: ObservableObject {
     func getCoins() {
         dataService.getCoins()
     }
+    
 }

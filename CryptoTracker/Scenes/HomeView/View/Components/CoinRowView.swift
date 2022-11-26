@@ -40,7 +40,7 @@ extension CoinRowView {
                 .foregroundColor(Color(.purpleMountainMajesty))
                 .frame(minWidth: 30)
                 .foregroundColor(Color(.pencilLead))
-            Circle()
+           CustomImageView(viewModel: CustomImageViewModel(url: coin.image))
                 .frame(width: 30, height: 30)
             Text(coin.symbol?.uppercased() ?? "No coin symbol")
                .font(.headline)

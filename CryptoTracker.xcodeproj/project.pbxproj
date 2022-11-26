@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E59039F29321D2A0054F925 /* CustomImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E59039E29321D2A0054F925 /* CustomImageViewModel.swift */; };
+		1E5903A129321D3C0054F925 /* CustomImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5903A029321D3C0054F925 /* CustomImageService.swift */; };
 		1E7B2F132921641E00224C80 /* EndpointHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B2F122921641E00224C80 /* EndpointHelper.swift */; };
 		1E7B2F192921858B00224C80 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B2F182921858B00224C80 /* CustomImageView.swift */; };
 		1E7B2F1B2921878E00224C80 /* ImageServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B2F1A2921878E00224C80 /* ImageServiceProvider.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E59039E29321D2A0054F925 /* CustomImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageViewModel.swift; sourceTree = "<group>"; };
+		1E5903A029321D3C0054F925 /* CustomImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageService.swift; sourceTree = "<group>"; };
 		1E7B2F122921641E00224C80 /* EndpointHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointHelper.swift; sourceTree = "<group>"; };
 		1E7B2F182921858B00224C80 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		1E7B2F1A2921878E00224C80 /* ImageServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceProvider.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				1E7B2F182921858B00224C80 /* CustomImageView.swift */,
+				1E59039E29321D2A0054F925 /* CustomImageViewModel.swift */,
+				1E5903A029321D3C0054F925 /* CustomImageService.swift */,
 			);
 			path = ImageView;
 			sourceTree = "<group>";
@@ -397,6 +403,7 @@
 				1E7B2F132921641E00224C80 /* EndpointHelper.swift in Sources */,
 				1E80B001291C3849007F88B4 /* String+Extension.swift in Sources */,
 				1EF1FE44291FFAB200915855 /* CoinDataService.swift in Sources */,
+				1E59039F29321D2A0054F925 /* CustomImageViewModel.swift in Sources */,
 				1EF1FE4F2921185400915855 /* CoinMarketRequestModel.swift in Sources */,
 				1E80AFFB291C314C007F88B4 /* ColorHelper.swift in Sources */,
 				1E80B00E291D74D4007F88B4 /* CoinResponseModel.swift in Sources */,
@@ -408,6 +415,7 @@
 				1E80AFE0291C2821007F88B4 /* CryptoTrackerApp.swift in Sources */,
 				1E7B2F1E292188E800224C80 /* EmptyModels.swift in Sources */,
 				1E7B2F1B2921878E00224C80 /* ImageServiceProvider.swift in Sources */,
+				1E5903A129321D3C0054F925 /* CustomImageService.swift in Sources */,
 				1E80AFF9291C2A39007F88B4 /* CircleButtonView.swift in Sources */,
 				1E80AFFF291C31C4007F88B4 /* GenericDataProtocol.swift in Sources */,
 				1E80B012291D7942007F88B4 /* PreviewProvider+Extension.swift in Sources */,
@@ -636,8 +644,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/darkbringer1/CombineNetworkOperationPackage.git";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

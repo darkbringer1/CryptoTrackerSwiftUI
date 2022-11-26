@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/darkbringer1/CombineNetworkOperationPackage.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "3e41e742abfb3e8a78809c77c7498e939c04c4f0"
+        "revision" : "c5204c3c31e59c2871c9b99ab3ef831a6281f178",
+        "version" : "0.1.2"
       }
     }
   ],

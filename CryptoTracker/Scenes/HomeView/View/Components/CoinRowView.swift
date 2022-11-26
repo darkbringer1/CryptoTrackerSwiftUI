@@ -10,6 +10,7 @@ import SwiftUI
 struct CoinRowView: View {
     let coin: CoinResponseModel
     let showHoldingsColumn: Bool
+    let customImageViewModel: CustomImageViewModel
     
     var body: some View {
         HStack {
@@ -28,7 +29,7 @@ struct CoinRowView: View {
 
 struct CoinRowView_Previews: PreviewProvider {
     static var previews: some View {
-        CoinRowView(coin: dev.coin, showHoldingsColumn: true)
+        CoinRowView(coin: dev.coin, showHoldingsColumn: true, customImageViewModel: CustomImageViewModel(url: dev.coin.image))
     }
 }
 
@@ -40,7 +41,7 @@ extension CoinRowView {
                 .foregroundColor(Color(.purpleMountainMajesty))
                 .frame(minWidth: 30)
                 .foregroundColor(Color(.pencilLead))
-           CustomImageView(viewModel: CustomImageViewModel(url: coin.image))
+           CustomImageView(viewModel: customImageViewModel)
                 .frame(width: 30, height: 30)
             Text(coin.symbol?.uppercased() ?? "No coin symbol")
                .font(.headline)

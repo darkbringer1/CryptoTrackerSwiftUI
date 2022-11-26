@@ -26,8 +26,7 @@ class CustomImageViewModel: ObservableObject {
         dataService.$imageData.sink { [weak self] _ in
             self?.isLoading = false
         } receiveValue: { [weak self] data in
-            guard let data = data else { return }
-            self?.image = UIImage(data: data)
+            self?.image = data
         }
         .store(in: &cancellables)
     }

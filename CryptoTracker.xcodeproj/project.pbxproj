@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E59039F29321D2A0054F925 /* CustomImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E59039E29321D2A0054F925 /* CustomImageViewModel.swift */; };
 		1E5903A129321D3C0054F925 /* CustomImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5903A029321D3C0054F925 /* CustomImageService.swift */; };
+		1E6E93E4293241D500B72FF7 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E93E3293241D500B72FF7 /* LocalFileManager.swift */; };
 		1E7B2F132921641E00224C80 /* EndpointHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B2F122921641E00224C80 /* EndpointHelper.swift */; };
 		1E7B2F192921858B00224C80 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B2F182921858B00224C80 /* CustomImageView.swift */; };
 		1E7B2F1B2921878E00224C80 /* ImageServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B2F1A2921878E00224C80 /* ImageServiceProvider.swift */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		1E59039E29321D2A0054F925 /* CustomImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageViewModel.swift; sourceTree = "<group>"; };
 		1E5903A029321D3C0054F925 /* CustomImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageService.swift; sourceTree = "<group>"; };
+		1E6E93E3293241D500B72FF7 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		1E7B2F122921641E00224C80 /* EndpointHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointHelper.swift; sourceTree = "<group>"; };
 		1E7B2F182921858B00224C80 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		1E7B2F1A2921878E00224C80 /* ImageServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceProvider.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E6E93E2293241C900B72FF7 /* LocalFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				1E6E93E3293241D500B72FF7 /* LocalFileManager.swift */,
+			);
+			path = LocalFileManager;
+			sourceTree = "<group>";
+		};
 		1E7B2F112921641200224C80 /* EndpointHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +273,7 @@
 		1E80B00B291D74C4007F88B4 /* DataOps */ = {
 			isa = PBXGroup;
 			children = (
+				1E6E93E2293241C900B72FF7 /* LocalFileManager */,
 				1EF1FE45291FFFD400915855 /* Network */,
 			);
 			path = DataOps;
@@ -397,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E80AFF2291C294C007F88B4 /* HomeView.swift in Sources */,
+				1E6E93E4293241D500B72FF7 /* LocalFileManager.swift in Sources */,
 				1EF1FE5229211B1D00915855 /* CoinMarketServiceProvider.swift in Sources */,
 				1E80B010291D78E2007F88B4 /* CoinRowView.swift in Sources */,
 				1E80B00A291C46E4007F88B4 /* CircleButtonAnimationView.swift in Sources */,

@@ -38,4 +38,8 @@ class CustomImageService {
                 self?.imageData = self?.fileManager.imageLoadingProcess(data: result, url: url)
             }).cancel()
     }
+    
+    deinit {
+        debugPrint("DEINIT CustomImageService")
+    }
 }

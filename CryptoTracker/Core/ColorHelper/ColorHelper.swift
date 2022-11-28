@@ -21,6 +21,8 @@ public extension Color {
         case appleValley
         case pencilLead
         case backgroundColor
+        case shadowColor
+        case lynxWhite
         
         var color: Color? {
             guard let color = UIColor(named: rawValue.capitalizingFirstLetter, in: .main, compatibleWith: nil) else { return nil }

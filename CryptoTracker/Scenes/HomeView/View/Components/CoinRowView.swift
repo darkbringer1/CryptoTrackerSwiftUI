@@ -37,17 +37,17 @@ extension CoinRowView {
     private var leftColumn: some View {
        HStack(spacing: 2) {
             Text("\(coin.rank)")
-                .font(.caption)
-                .foregroundColor(Color(.purpleMountainMajesty))
-                .frame(minWidth: 30)
-                .foregroundColor(Color(.pencilLead))
+               .font(.caption)
+               .foregroundColor(Color(.purpleMountainMajesty))
+               .frame(minWidth: 30)
+               .foregroundColor(Color(.pencilLead))
            CustomImageView(viewModel: customImageViewModel)
-                .frame(width: 30, height: 30)
-            Text(coin.symbol?.uppercased() ?? "No coin symbol")
+               .frame(width: 30, height: 30)
+           Text(coin.symbol?.uppercased() ?? "No coin symbol")
                .font(.headline)
                .padding(.leading, 6)
                .foregroundColor(Color(.rosyHighlight))
-        }
+       }
     }
     
     private var holdingsColumn: some View {

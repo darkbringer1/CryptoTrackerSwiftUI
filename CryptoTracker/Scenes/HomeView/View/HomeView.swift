@@ -17,14 +17,15 @@ struct HomeView: View {
                 .ignoresSafeArea()
             
             VStack {
-                homeHeader
-                columnTitles
+                HomeHeader()
+                SearchBarView(searchText: $vm.searchText)
+                ColumnTitles()
                 if !showPortfolio {
-                    allCoinsList
+                    AllCoinsList()
                     .transition(.move(edge: .leading))
                 }
                 if showPortfolio {
-                    portfolioCoinsList
+                    PortfolioCoinsList()
                         .transition(.move(edge: .trailing))
                 }
                 Spacer()
@@ -46,7 +47,9 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 extension HomeView {
-    private var homeHeader: some View {
+    
+    @ViewBuilder
+    private func HomeHeader() -> some View {
         HStack {
             CircleButtonView(iconName: showPortfolio ? "plus" : "info",
                              tintColor: Color(.purpleMountainMajesty))
@@ -73,7 +76,9 @@ extension HomeView {
         }
         .padding(.horizontal)
     }
-    private var allCoinsList: some View {
+    
+    @ViewBuilder
+    private func AllCoinsList() -> some View {
         List {
             ForEach(vm.allCoins) { coin in
                 CoinRowView(coin: coin, showHoldingsColumn: showPortfolio, customImageViewModel: CustomImageViewModel(url: coin.image))
@@ -84,7 +89,8 @@ extension HomeView {
         .scrollIndicators(.hidden)
     }
     
-    private var portfolioCoinsList: some View {
+    @ViewBuilder
+    private func PortfolioCoinsList() -> some View {
         List {
             ForEach(vm.portfolioCoins) { coin in
                 CoinRowView(coin: coin, showHoldingsColumn: showPortfolio, customImageViewModel: CustomImageViewModel(url: coin.image))
@@ -95,7 +101,8 @@ extension HomeView {
         .scrollIndicators(.hidden)
     }
     
-    private var columnTitles: some View {
+    @ViewBuilder
+    private func ColumnTitles() -> some View {
         HStack {
             Text("Coin")
             Spacer()

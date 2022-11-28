@@ -30,4 +30,8 @@ class CustomImageViewModel: ObservableObject {
         }
         .store(in: &cancellables)
     }
+    
+    deinit {
+        debugPrint("DEINIT CustomImageViewModel")
+    }
 }

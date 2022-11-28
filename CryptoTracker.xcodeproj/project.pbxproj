@@ -10,6 +10,8 @@
 		1E59039F29321D2A0054F925 /* CustomImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E59039E29321D2A0054F925 /* CustomImageViewModel.swift */; };
 		1E5903A129321D3C0054F925 /* CustomImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5903A029321D3C0054F925 /* CustomImageService.swift */; };
 		1E6E93E4293241D500B72FF7 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E93E3293241D500B72FF7 /* LocalFileManager.swift */; };
+		1E6E93E72932515F00B72FF7 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E93E62932515F00B72FF7 /* SearchBarView.swift */; };
+		1E6E93E929338CD000B72FF7 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6E93E829338CD000B72FF7 /* UIApplication+Extension.swift */; };
 		1E7B2F132921641E00224C80 /* EndpointHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B2F122921641E00224C80 /* EndpointHelper.swift */; };
 		1E7B2F192921858B00224C80 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B2F182921858B00224C80 /* CustomImageView.swift */; };
 		1E7B2F1B2921878E00224C80 /* ImageServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7B2F1A2921878E00224C80 /* ImageServiceProvider.swift */; };
@@ -43,6 +45,8 @@
 		1E59039E29321D2A0054F925 /* CustomImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageViewModel.swift; sourceTree = "<group>"; };
 		1E5903A029321D3C0054F925 /* CustomImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageService.swift; sourceTree = "<group>"; };
 		1E6E93E3293241D500B72FF7 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
+		1E6E93E62932515F00B72FF7 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		1E6E93E829338CD000B72FF7 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		1E7B2F122921641E00224C80 /* EndpointHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointHelper.swift; sourceTree = "<group>"; };
 		1E7B2F182921858B00224C80 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		1E7B2F1A2921878E00224C80 /* ImageServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServiceProvider.swift; sourceTree = "<group>"; };
@@ -91,6 +95,14 @@
 				1E6E93E3293241D500B72FF7 /* LocalFileManager.swift */,
 			);
 			path = LocalFileManager;
+			sourceTree = "<group>";
+		};
+		1E6E93E52932515000B72FF7 /* CustomSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				1E6E93E62932515F00B72FF7 /* SearchBarView.swift */,
+			);
+			path = CustomSearchBar;
 			sourceTree = "<group>";
 		};
 		1E7B2F112921641200224C80 /* EndpointHelper */ = {
@@ -218,6 +230,7 @@
 		1E80AFF5291C2A14007F88B4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1E6E93E52932515000B72FF7 /* CustomSearchBar */,
 				1E80AFF8291C2A39007F88B4 /* CircleButtonView.swift */,
 				1E80B009291C46E4007F88B4 /* CircleButtonAnimationView.swift */,
 				1E80B00F291D78E2007F88B4 /* CoinRowView.swift */,
@@ -266,6 +279,7 @@
 				1E80B000291C3849007F88B4 /* String+Extension.swift */,
 				1E80B011291D7942007F88B4 /* PreviewProvider+Extension.swift */,
 				1E80B013291D7C8C007F88B4 /* Double+Extension.swift */,
+				1E6E93E829338CD000B72FF7 /* UIApplication+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -413,6 +427,7 @@
 				1E80B010291D78E2007F88B4 /* CoinRowView.swift in Sources */,
 				1E80B00A291C46E4007F88B4 /* CircleButtonAnimationView.swift in Sources */,
 				1E7B2F132921641E00224C80 /* EndpointHelper.swift in Sources */,
+				1E6E93E929338CD000B72FF7 /* UIApplication+Extension.swift in Sources */,
 				1E80B001291C3849007F88B4 /* String+Extension.swift in Sources */,
 				1EF1FE44291FFAB200915855 /* CoinDataService.swift in Sources */,
 				1E59039F29321D2A0054F925 /* CustomImageViewModel.swift in Sources */,
@@ -426,6 +441,7 @@
 				1EF1FE47291FFFDF00915855 /* NetworkManager.swift in Sources */,
 				1E80AFE0291C2821007F88B4 /* CryptoTrackerApp.swift in Sources */,
 				1E7B2F1E292188E800224C80 /* EmptyModels.swift in Sources */,
+				1E6E93E72932515F00B72FF7 /* SearchBarView.swift in Sources */,
 				1E7B2F1B2921878E00224C80 /* ImageServiceProvider.swift in Sources */,
 				1E5903A129321D3C0054F925 /* CustomImageService.swift in Sources */,
 				1E80AFF9291C2A39007F88B4 /* CircleButtonView.swift in Sources */,

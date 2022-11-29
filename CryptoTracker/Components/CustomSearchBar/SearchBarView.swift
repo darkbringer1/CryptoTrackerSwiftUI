@@ -28,15 +28,16 @@ struct SearchBarView: View {
                 )
         }
         .foregroundColor(
-            searchText.isEmpty ? Color(.gray) : Color(.pencilLead))
+            searchText.isEmpty ? Color(.pencilLead): Color(.gray)
+        )
         .font(.headline)
         .padding()
         .background(
         RoundedRectangle(cornerRadius: 25)
             .fill(Color(.backgroundColor))
-            .shadow(color: Color(.shadowColor), radius: 10)
+            .shadow(color: Color(.shadowColor), radius: 5)
         )
-        .padding()
+        .padding(.horizontal)
     }
 }
 

@@ -14,15 +14,23 @@ class HomeViewModel: ObservableObject {
     @Published var portfolioCoins: [CoinResponseModel] = []
     @Published var searchText: String = ""
     
-    private let dataService = CoinDataService()
+    @Published var stats = [StatisticModel(title: "Title1", value: "Value1", percentageChange: 1),
+                            StatisticModel(title: "Title2", value: "Value2", percentageChange: -1),
+                            StatisticModel(title: "Title4", value: "Value4"),
+                            StatisticModel(title: "Title5", value: "Value5")]
+    
+    private let dataService = HomeDataService()
     private var cancellables = Set<AnyCancellable>()
     
     init() {
         addSubscribers()
     }
     
+    func getCoins() {
+        dataService.getCoins()
+    }
+    
     private func addSubscribers() {
-        
         dataService.$allCoins
             .combineLatest($searchText)
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
@@ -31,10 +39,13 @@ class HomeViewModel: ObservableObject {
                 self?.allCoins = coins
             }
             .store(in: &cancellables)
-    }
-    
-    func getCoins() {
-        dataService.getCoins()
+        
+        dataService.$marketData
+            .tryMap(mapStats)
+            .sink(receiveCompletion: { _ in }, receiveValue: { [weak self] items in
+                self?.stats = items
+            })
+            .store(in: &cancellables)
     }
     
     private func filterCoins(coins: [CoinResponseModel], text: String) -> [CoinResponseModel] {
@@ -49,5 +60,14 @@ class HomeViewModel: ObservableObject {
             coinSymbol.lowercased().contains(lowercasedText) ||
             coinId.lowercased().contains(lowercasedText)
         }
+    }
+    
+    private func mapStats(with marketData: MarketData?) -> [StatisticModel] {
+        guard var marketData = marketData else { return [] }
+        let stat1 = StatisticModel(title: "BTC", value: marketData.getVolume(for: "btc"), percentageChange: marketData.getMarketCapPercentage(for: "btc"))
+        let stat2 = StatisticModel(title: "ETH", value: marketData.getVolume(for: "eth"), percentageChange: marketData.getMarketCapPercentage(for: "eth"))
+        let stat3 = StatisticModel(title: "USDT", value: marketData.getVolume(for: "usdt"), percentageChange: marketData.getMarketCapPercentage(for: "usdt"))
+        
+        return [stat1]
     }
 }

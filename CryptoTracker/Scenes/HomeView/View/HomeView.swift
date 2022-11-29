@@ -18,6 +18,7 @@ struct HomeView: View {
             
             VStack {
                 HomeHeader()
+                StatsView()
                 SearchBarView(searchText: $vm.searchText)
                 ColumnTitles()
                 if !showPortfolio {
@@ -115,5 +116,16 @@ extension HomeView {
         .font(.subheadline)
         .padding(.horizontal)
         .foregroundColor(Color(.pencilLead))
+    }
+   
+    @ViewBuilder
+    private func StatsView() -> some View {
+        HStack {
+            ForEach(vm.stats) { stat in
+                StatisticView(stat: stat)
+            }
+            .padding()
+        }
+        .frame(width: UIScreen.main.bounds.width, alignment: showPortfolio ? .trailing : .leading)
     }
 }

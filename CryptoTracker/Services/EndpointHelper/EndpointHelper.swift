@@ -27,11 +27,14 @@ enum EndpointManager {
         typealias Value = String
         
         case coinMarket
+        case global
         
         var value: String {
             switch self {
                 case .coinMarket:
                     return "coins/markets"
+                case .global:
+                    return "global"
             }
         }
     }

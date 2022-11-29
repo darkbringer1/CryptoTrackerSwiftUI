@@ -14,6 +14,7 @@ struct CryptoTrackerApp: App {
             NavigationView {
                 HomeView()
                     .navigationBarHidden(true)
+                    .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
             }
         }
     }

@@ -175,8 +175,8 @@
 		1E80AFDE291C2821007F88B4 /* CryptoTracker */ = {
 			isa = PBXGroup;
 			children = (
-				1E7B2F162921857900224C80 /* Components */,
 				1E80AFDF291C2821007F88B4 /* CryptoTrackerApp.swift */,
+				1E7B2F162921857900224C80 /* Components */,
 				1E80B00B291D74C4007F88B4 /* DataOps */,
 				1E80AFE1291C2821007F88B4 /* ContentView.swift */,
 				1E80B00C291D74CA007F88B4 /* Services */,

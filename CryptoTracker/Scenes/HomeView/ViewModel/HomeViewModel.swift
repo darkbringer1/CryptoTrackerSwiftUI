@@ -14,10 +14,7 @@ class HomeViewModel: ObservableObject {
     @Published var portfolioCoins: [CoinResponseModel] = []
     @Published var searchText: String = ""
     
-    @Published var stats = [StatisticModel(title: "Title1", value: "Value1", percentageChange: 1),
-                            StatisticModel(title: "Title2", value: "Value2", percentageChange: -1),
-                            StatisticModel(title: "Title4", value: "Value4"),
-                            StatisticModel(title: "Title5", value: "Value5")]
+    @Published var stats: [StatisticModel] = []
     
     private let dataService = HomeDataService()
     private var cancellables = Set<AnyCancellable>()
@@ -64,10 +61,10 @@ class HomeViewModel: ObservableObject {
     
     private func mapStats(with marketData: MarketData?) -> [StatisticModel] {
         guard var marketData = marketData else { return [] }
-        let stat1 = StatisticModel(title: "BTC", value: marketData.getVolume(for: "btc"), percentageChange: marketData.getMarketCapPercentage(for: "btc"))
-        let stat2 = StatisticModel(title: "ETH", value: marketData.getVolume(for: "eth"), percentageChange: marketData.getMarketCapPercentage(for: "eth"))
-        let stat3 = StatisticModel(title: "USDT", value: marketData.getVolume(for: "usdt"), percentageChange: marketData.getMarketCapPercentage(for: "usdt"))
+        let stat1 = StatisticModel(title: "Market Cap", value: marketData.getMarketCap(for: "usd"), percentageChange: marketData.marketCapChangePercentage24HUsd)
+        let stat2 = StatisticModel(title: "24h Volume", value: marketData.getVolume(for: "usd"))
+        let stat3 = StatisticModel(title: "BTC Dominance", value: marketData.getDominance(for: "btc"))
         
-        return [stat1]
+        return [stat1, stat2, stat3]
     }
 }

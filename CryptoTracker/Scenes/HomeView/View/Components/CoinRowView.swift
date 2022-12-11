@@ -12,6 +12,12 @@ struct CoinRowView: View {
     let showHoldingsColumn: Bool
     let customImageViewModel: CustomImageViewModel
     
+    init(coin: CoinResponseModel, showHoldingsColumn: Bool, imageUrl: String) {
+        self.coin = coin
+        self.showHoldingsColumn = showHoldingsColumn
+        self.customImageViewModel = CustomImageViewModel(url: imageUrl)
+    }
+    
     var body: some View {
         HStack {
             leftColumn
@@ -29,7 +35,7 @@ struct CoinRowView: View {
 
 struct CoinRowView_Previews: PreviewProvider {
     static var previews: some View {
-        CoinRowView(coin: dev.coin, showHoldingsColumn: true, customImageViewModel: CustomImageViewModel(url: dev.coin.image))
+        CoinRowView(coin: dev.coin, showHoldingsColumn: true, imageUrl: dev.coin.image ?? "")
     }
 }
 

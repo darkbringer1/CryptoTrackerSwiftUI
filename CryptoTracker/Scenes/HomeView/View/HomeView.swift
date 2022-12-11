@@ -82,24 +82,27 @@ extension HomeView {
     private func AllCoinsList() -> some View {
         List {
             ForEach(vm.allCoins) { coin in
-                CoinRowView(coin: coin, showHoldingsColumn: showPortfolio, customImageViewModel: CustomImageViewModel(url: coin.image))
+                CoinRowView(coin: coin, showHoldingsColumn: showPortfolio, imageUrl: coin.image ?? "")
+                    .onTapGesture {
+                        print("\(coin.id)")
+                    }
             }
             .listRowInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
         }
         .listStyle(PlainListStyle())
-        .scrollIndicators(.hidden)
+//        .scrollIndicators(.hidden)
     }
     
     @ViewBuilder
     private func PortfolioCoinsList() -> some View {
         List {
             ForEach(vm.portfolioCoins) { coin in
-                CoinRowView(coin: coin, showHoldingsColumn: showPortfolio, customImageViewModel: CustomImageViewModel(url: coin.image))
+                CoinRowView(coin: coin, showHoldingsColumn: showPortfolio, imageUrl: coin.image ?? "")
             }
             .listRowInsets(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
         }
         .listStyle(PlainListStyle())
-        .scrollIndicators(.hidden)
+//        .scrollIndicators(.hidden)
     }
     
     @ViewBuilder
@@ -124,8 +127,8 @@ extension HomeView {
             ForEach(vm.stats) { stat in
                 StatisticView(stat: stat)
             }
-            .padding()
         }
+        .padding()
         .frame(width: UIScreen.main.bounds.width, alignment: showPortfolio ? .trailing : .leading)
     }
 }

@@ -40,6 +40,8 @@
 		1E80B012291D7942007F88B4 /* PreviewProvider+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B011291D7942007F88B4 /* PreviewProvider+Extension.swift */; };
 		1E80B014291D7C8C007F88B4 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80B013291D7C8C007F88B4 /* Double+Extension.swift */; };
 		1EE4EB25294631A500687DAA /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE4EB24294631A500687DAA /* CalendarView.swift */; };
+		1EE4EB2829463ECD00687DAA /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE4EB2729463ECD00687DAA /* PortfolioView.swift */; };
+		1EE4EB2B294641D900687DAA /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE4EB2A294641D900687DAA /* XMarkButton.swift */; };
 		1EF1FE47291FFFDF00915855 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1FE46291FFFDF00915855 /* NetworkManager.swift */; };
 		1EF1FE4F2921185400915855 /* CoinMarketRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1FE4E2921185400915855 /* CoinMarketRequestModel.swift */; };
 		1EF1FE5229211B1D00915855 /* CoinMarketServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF1FE5129211B1D00915855 /* CoinMarketServiceProvider.swift */; };
@@ -82,6 +84,8 @@
 		1E80B011291D7942007F88B4 /* PreviewProvider+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+Extension.swift"; sourceTree = "<group>"; };
 		1E80B013291D7C8C007F88B4 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		1EE4EB24294631A500687DAA /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		1EE4EB2729463ECD00687DAA /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		1EE4EB2A294641D900687DAA /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
 		1EF1FE46291FFFDF00915855 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1EF1FE4E2921185400915855 /* CoinMarketRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketRequestModel.swift; sourceTree = "<group>"; };
 		1EF1FE5129211B1D00915855 /* CoinMarketServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinMarketServiceProvider.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 		1E7B2F162921857900224C80 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1EE4EB29294641CB00687DAA /* XMarkButton */,
 				1EE4EB232946313B00687DAA /* CalendarView */,
 				1E6E93E52932515000B72FF7 /* CustomSearchBar */,
 				1E7B2F172921858000224C80 /* ImageView */,
@@ -223,6 +228,7 @@
 		1E80AFEE291C291F007F88B4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1EE4EB2629463EBC00687DAA /* PortfolioView */,
 				1E80AFF0291C2938007F88B4 /* HomeView */,
 			);
 			path = Scenes;
@@ -331,6 +337,22 @@
 				1EE4EB24294631A500687DAA /* CalendarView.swift */,
 			);
 			path = CalendarView;
+			sourceTree = "<group>";
+		};
+		1EE4EB2629463EBC00687DAA /* PortfolioView */ = {
+			isa = PBXGroup;
+			children = (
+				1EE4EB2729463ECD00687DAA /* PortfolioView.swift */,
+			);
+			path = PortfolioView;
+			sourceTree = "<group>";
+		};
+		1EE4EB29294641CB00687DAA /* XMarkButton */ = {
+			isa = PBXGroup;
+			children = (
+				1EE4EB2A294641D900687DAA /* XMarkButton.swift */,
+			);
+			path = XMarkButton;
 			sourceTree = "<group>";
 		};
 		1EF1FE42291FFA9500915855 /* Models */ = {
@@ -469,6 +491,7 @@
 				1E80AFE2291C2821007F88B4 /* ContentView.swift in Sources */,
 				1E6E93FC2936719100B72FF7 /* GlobalMarketServiceProvider.swift in Sources */,
 				1E80B005291C428B007F88B4 /* ColorView.swift in Sources */,
+				1EE4EB2829463ECD00687DAA /* PortfolioView.swift in Sources */,
 				1EE4EB25294631A500687DAA /* CalendarView.swift in Sources */,
 				1E7B2F192921858B00224C80 /* CustomImageView.swift in Sources */,
 				1E6E93F32936613800B72FF7 /* StatisticModel.swift in Sources */,
@@ -482,6 +505,7 @@
 				1E80AFF9291C2A39007F88B4 /* CircleButtonView.swift in Sources */,
 				1E80AFFF291C31C4007F88B4 /* GenericDataProtocol.swift in Sources */,
 				1E80B012291D7942007F88B4 /* PreviewProvider+Extension.swift in Sources */,
+				1EE4EB2B294641D900687DAA /* XMarkButton.swift in Sources */,
 				1E80AFF4291C2957007F88B4 /* HomeViewModel.swift in Sources */,
 				1E80AFFE291C31C4007F88B4 /* GenericValueProtocol.swift in Sources */,
 				1E6E93F829366F1D00B72FF7 /* GlobalCryptoDataResponseModel.swift in Sources */,
